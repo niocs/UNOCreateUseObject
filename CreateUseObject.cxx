@@ -32,7 +32,7 @@ SAL_IMPLEMENT_MAIN()
 	    fprintf(stdout, "\nremote ServiceManager is not available\n");
 	fflush(stdout);
 
-	// Create Desktop object, xDesktop is still a XInterface, need to upcast it via queryInterface.
+	// Create Desktop object, xDesktop is still a XInterface, need to upcast it.
 	Reference< XInterface > xDesktop = xServiceManager->createInstanceWithContext( OUString("com.sun.star.frame.Desktop"), xContext );
 
 	if ( !xDesktop.is() )
