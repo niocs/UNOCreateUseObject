@@ -42,7 +42,7 @@ SAL_IMPLEMENT_MAIN()
 	    return -1;
 	}
 
-	// Get XDesktop2 from XInterface type (upcast)
+	// Get XDesktop2 from XInterface type (upcast) indirectly using XInterface's queryInterface() method.
 	Reference< XDesktop2 > xDesktop2( xDesktop, UNO_QUERY );
 
 	if ( !xDesktop2.is() )
